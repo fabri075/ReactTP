@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nombre": "MacBook Pro",
+    "descripcion": "Laptop de alta gama con pantalla Retina de 13 pulgadas y procesador Intel Core i5",
+    "precio": 1999.99,
+    "categoria": "Notebooks",
+    "imagen": "https://www.macstation.com.ar/img/productos/2922-2846-2620-1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Dell XPS",
+    "descripcion": "Laptop de gama alta con pantalla táctil de 13 pulgadas y procesador Intel Core i7",
+    "precio": 1699.99,
+    "categoria": "Notebooks",
+    "imagen": "https://www.todonotebook.com.ar/wp-content/uploads/2019/11/xps-7590-arriba.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Lenovo ThinkPad",
+    "descripcion": "Laptop empresarial con pantalla de 15.6 pulgadas y procesador Intel Core i7",
+    "precio": 1199.99,
+    "categoria": "Notebooks",
+    "imagen": "https://p3-ofp.static.pub/fes/cms/2022/06/13/c70uc8tdc9jq9bo4x41dphqfqusowi992268.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Acer Swift 3",
+    "descripcion": "Laptop de gama media con pantalla de 14 pulgadas y procesador AMD Ryzen 7",
+    "precio": 799.99,
+    "categoria": "Notebooks",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_881094-MLA44986599731_022021-O.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Monitor LG Ultrawide",
+    "descripcion": "Monitor de 34 pulgadas con relación de aspecto 21:9 y resolución 3440x1440",
+    "precio": 999.99,
+    "categoria": "Monitores",
+    "imagen": "https://www.lg.com/ar/images/monitores/w1943c/gallery/large01.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Monitor Dell",
+    "descripcion": "Monitor de 27 pulgadas con resolución 4K y tecnología HDR",
+    "precio": 799.99,
+    "categoria": "Monitores",
+    "imagen": "https://snpi.dell.com/snp/images/products/large/es-ar~210-AXLG/210-AXLG_V3.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Monitor Samsung",
+    "descripcion": "Monitor de 32 pulgadas con resolución 4K y compatibilidad con HDR10+",
+    "precio": 899.99,
+    "categoria": "Monitores",
+    "imagen": "https://images.fravega.com/f500/32397e21c5240c13f2d32ad3842cd3e8.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Teclado mecánico Logitech",
+    "descripcion": "Teclado mecánico con retroiluminación RGB y teclas personalizables",
+    "precio": 149.99,
+    "categoria": "Perifericos",
+    "imagen": "https://www.soscomputacion.com.ar/20202/teclado-mecanico-gamer-logitech-g-pro-x-alta-gama.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Ratón inalámbrico Microsoft",
+    "descripcion": "Ratón inalámbrico ergonómico con 7 botones programables",
+    "precio": 69.99,
+    "categoria": "Perifericos",
+    "imagen": "https://www.atajo.com.ar/thumb/0000000RJN-0005381216RJN-00053_800x800.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Logitech MX Master 3",
+    "descripcion": "Ratón inalámbrico avanzado con sensor Darkfield y botón de desplazamiento rápido.",
+    "precio": 79.99,
+    "categoria": "Perifericos",
+    "imagen": "https://www.megatone.net/images/articulos/zoom/344/MKT0094KMX.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Apple Magic Keyboard",
+    "descripcion": "Teclado inalámbrico con mecanismo de tijera y batería recargable.",
+    "precio": 169.99,
+    "categoria": "Perifericos",
+    "imagen": "https://www.macstation.com.ar/img/productos/2933-magic-keyboard.jpg"
+  }
+]

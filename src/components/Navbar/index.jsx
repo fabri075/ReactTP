@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './navbar.module.css';
-import logo from './logopag.png';
+import logo from '../../assets/logopag.png';
 import CartWidget from '../CartWidget';
 import { Button, Menu, MenuItem } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [category, setCategory] = useState(null);
@@ -16,13 +17,13 @@ const Navbar = () => {
   return (
     <nav className={styles.container}>
     <div className={styles.menu}>
-        <Button variant='contained'>Home</Button>
+        <Link to="/home"> <Button>Home</Button></Link>
         <Button onClick={showCategory} 
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}> Productos</Button>
-        <Button>Contacto</Button>
-        <Button>Acerca</Button>
+        aria-expanded={open ? 'true' : undefined}> Categorías</Button>
+        <Link to="/contact"><Button>Contacto</Button></Link>
+        <Link to="/about"><Button>Acerca</Button></Link>
         <CartWidget />
         <Menu
         id="basic-menu"
@@ -33,13 +34,13 @@ const Navbar = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={closeCategory}>Categoria 1</MenuItem>
-        <MenuItem onClick={closeCategory}>Categoria 2</MenuItem>
-        <MenuItem onClick={closeCategory}>Categoria 3</MenuItem>
+        <Link to="/category/Notebooks"><MenuItem onClick={closeCategory}>Notebooks</MenuItem></Link>
+        <Link to="/category/Monitores"><MenuItem onClick={closeCategory}>Monitores</MenuItem></Link>
+        <Link to="/category/Perifericos"><MenuItem onClick={closeCategory}>Perifericos</MenuItem></Link>
       </Menu>
     </div>
         <div className={styles.logo}>
-        <img src={logo} />
+        <Link to="/"><img src={logo} /></Link>
         </div>
     </nav>
   )
