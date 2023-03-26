@@ -5,18 +5,28 @@ import Typography from '@mui/material/Typography';
 import { Grid, CardActionArea } from '@mui/material';
 import styles from './itemListContainer.module.css';
 import { Link, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const ItemListContainer = ({ greeting, list}) => {
 const {name} = useParams();
-let message = name ? name : greeting;
-if(name){
-  list = list.filter((item) => item.categoria == name);
-}
+const [products, setProducts] = useState([])
+useEffect(() => {
+  fetch("/data/products.json")
+  .then((res) => res.json())
+  .then((data) => {
+    if(name != undefined){
+      setProducts(data.filter((prod) => prod.categoria === name));
+    }else{
+      setProducts(data);
+    }
+  })
+  .catch((error) => console.log(error))
+}, [name])
   return (
     <section className={styles.container}>
-      <h1>{message}</h1>
+      <h1>{name ? name : greeting}</h1>
       <Grid container spacing={5}>
-        {list.map((item) => (
+        {products.map((item) => (
           <Grid item xs={3} sm={6} md={4}>
             <div className={styles.centercard}>
               <Link to={`/item/${item.id}`}>
