@@ -1,6 +1,7 @@
 import { AddShoppingCart } from '@mui/icons-material';
 import styles from '../ItemDetail.module.css';
 import { Button } from '@mui/material';
+import QuantitySelector from '../QuantitySelector';
 
 const ItemDescription = ({item}) => {
   return (
@@ -13,6 +14,7 @@ const ItemDescription = ({item}) => {
           <h1>{item.nombre}</h1>
           <p>{item.descripcion}</p>
           <h4>${item.precio}</h4>
+          <QuantitySelector />
           <Button color='warning' variant='contained' startIcon={<AddShoppingCart />}>Añadir al carrito</Button>
         </div>
       </div>

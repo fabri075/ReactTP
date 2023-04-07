@@ -1,38 +1,3 @@
-.input-group {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-}
-
-.input-group-btn {
-    background-color: #ccc;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    padding: 8px 16px;
-}
-
-.btn-left {
-    border-radius: 4px 0 0 4px;
-}
-
-.btn-right {
-    border-radius: 0 4px 4px 0;
-}
-
-.form-control {
-    border-radius: 0;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    display: block;
-    font-size: 14px;
-    padding: 8px 16px;
-    width: 100%;
-}
-
 .ajustgrid {
     width: 100%;
     display: flex;

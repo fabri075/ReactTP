@@ -1,4 +1,4 @@
-import { Grid, CardActionArea } from '@mui/material';
+import { Grid } from '@mui/material';
 import styles from './itemListContainer.module.css';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';

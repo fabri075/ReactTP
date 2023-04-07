@@ -1,15 +1,16 @@
 import { useState } from "react";
 import styles from '../ItemDetail.module.css';
+import { Button } from "@mui/material";
 
 
 const QuantitySelector = () => {
     const [count, setCount] = useState(0);
 
     return (
-        <div class={styles.input-group}>
-            <button class={`${styles.input-group-btn} ${styles.btn-left}`}>Botón izquierdo</button>
-            <input type="text" class="form-control" placeholder="Ingrese su texto aquí..." />
-            <button class={`${styles.input-group-btn} ${styles.btn-right}`}>Botón derecho</button>
+        <div className={`${styles.inputGroup}`}>
+            <Button color='warning' variant='contained'>-</Button>
+            <input type="text" className={styles.formControl} value={count} />
+            <Button color='warning' variant='contained'>+</Button>
         </div>
     )
 }
