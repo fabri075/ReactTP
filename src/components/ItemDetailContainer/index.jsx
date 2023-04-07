@@ -2,6 +2,7 @@ import { AddShoppingCart, ArrowBack } from '@mui/icons-material';
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import ItemDescription from '../ItemDetail/ItemDescription';
 import styles from './itemdetailcontainer.module.css';
 
 const ItemDetailContainer = () => {
@@ -27,19 +28,7 @@ const ItemDetailContainer = () => {
         </Button>
       </div>
       {item.id ? (
-      <div className={styles.ajustgrid}>
-        <div className={styles.gridContainer}>
-          <div className={styles.imageColumn}>
-            <img src={item.imagen} alt="Descripción de la imagen" />
-          </div>
-          <div className={styles.textColumn}>
-            <h1>{item.nombre}</h1>
-            <p>{item.descripcion}</p>
-            <h4>${item.precio}</h4>
-            <Button color='warning' variant='contained' startIcon={<AddShoppingCart />}>Añadir al carrito</Button>
-          </div>
-        </div>
-      </div>
+      <ItemDescription item={item}/>
       ) : (
         <h1>Producto no encontrado</h1>
       )}

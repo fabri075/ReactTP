@@ -5,9 +5,11 @@
     text-align: center;
 }
 
-.buttonback{
-    margin-bottom: 2rem;
-    width: 100%;
+.centercard{
     display: flex;
-    margin-left: 3rem;
+    justify-content: center;
+} 
+
+h1{
+    margin-bottom: 4rem;
 }
