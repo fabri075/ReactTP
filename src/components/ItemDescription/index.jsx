@@ -1,9 +1,17 @@
 import { AddShoppingCart } from '@mui/icons-material';
-import styles from '../ItemDetail.module.css';
+import styles from './ItemDescription.module.css';
 import { Button } from '@mui/material';
+import { useState } from "react";
 import QuantitySelector from '../QuantitySelector';
 
 const ItemDescription = ({item}) => {
+  const [quantity, setQuantity] = useState(1)
+  const handleAddCart = () => {
+    console.log(quantity);
+  }
+  const handleQuantityChange = (total) => {
+    setQuantity(total);
+  }
   return (
     <div className={styles.ajustgrid}>
       <div className={styles.gridContainer}>
@@ -14,8 +22,8 @@ const ItemDescription = ({item}) => {
           <h1>{item.nombre}</h1>
           <p>{item.descripcion}</p>
           <h4>${item.precio}</h4>
-          <QuantitySelector />
-          <Button color='warning' variant='contained' startIcon={<AddShoppingCart />}>Añadir al carrito</Button>
+          <QuantitySelector count={quantity} changeQuantity={handleQuantityChange} />
+          <Button color='warning' onClick={handleAddCart} variant='contained' startIcon={<AddShoppingCart />}>Añadir al carrito</Button>
         </div>
       </div>
     </div>

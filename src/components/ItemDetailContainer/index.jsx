@@ -1,25 +1,26 @@
-import { AddShoppingCart, ArrowBack } from '@mui/icons-material';
+import { ArrowBack } from '@mui/icons-material';
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import ItemDescription from '../ItemDetail/ItemDescription';
 import styles from './itemdetailcontainer.module.css';
+import db from "../../../db/firebase-config.js";
+import { collection, getDocs } from 'firebase/firestore';
+import ItemDescription from '../ItemDescription';
 
 const ItemDetailContainer = () => {
   const backpage = useNavigate();
   const { id } = useParams();
-  const [item, setItem] = useState([])
-  useEffect(() => {
-    fetch("/data/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const product = data.find((prod) => prod.id == id)
-        if (product != undefined) {
-          setItem(product);
-        }
-      })
-      .catch((error) => console.log(error))
-  }, [id])
+  const [item, setItem] = useState([]);
+  const itemsRef = collection(db, "items");
+  const getItems = async () => {
+    const itemsCollection = await getDocs(itemsRef)
+    const Items = itemsCollection.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    const product = Items.find((prod) => prod.id == id)
+    if (product != undefined) {
+      setItem(product);
+    }
+  }
+  useEffect(() => { getItems() }, [id]);
   return (
     <section className={styles.container}>
       <div className={styles.buttonback}>
