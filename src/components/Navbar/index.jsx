@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className={styles.container}>
     <div className={styles.menu}>
-        <Link to="/home"> <Button>Home</Button></Link>
+        <Link to="/"> <Button>Home</Button></Link>
         <Button onClick={showCategory} 
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
