@@ -28,7 +28,7 @@ const ItemListContainer = ({ greeting }) => {
     <section className={styles.container}>
       <h1>{name ? name : greeting}</h1>
       {!load ? (
-        <Loading />
+        <Loading screen="listado"/>
       ) : (
         <Grid container spacing={5}>
           {products.map((item) => (
