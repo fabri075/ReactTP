@@ -13,7 +13,7 @@ const QuantitySelector = ({count, changeQuantity}) => {
         <div className={`${styles.inputGroup}`}>
             <Button color='warning' variant='contained' onClick={restar_uno}>-</Button>
             <input type="number" readOnly className={styles.inputCount} min={1} step="any" value={count} />
-            <Button color='warning' variant='contained' onClick={() => sumar_uno}>+</Button>
+            <Button color='warning' variant='contained' onClick={sumar_uno}>+</Button>
         </div>
     )
 }

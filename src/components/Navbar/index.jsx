@@ -24,7 +24,7 @@ const Navbar = () => {
         aria-expanded={open ? 'true' : undefined}> Categorías</Button>
         <Link to="/contact"><Button>Contacto</Button></Link>
         <Link to="/about"><Button>Acerca</Button></Link>
-        <CartWidget />
+        <Link to="/cart"><CartWidget /></Link>
         <Menu
         id="basic-menu"
         anchorEl={category}
