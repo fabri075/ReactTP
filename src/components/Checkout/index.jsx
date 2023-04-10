@@ -2,10 +2,18 @@ import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import styles from './checkout.module.css';
 import { Button } from '@mui/material';
+import ModalUser from '../ModalUser';
 
 const Checkout = () => {
     const { cart, deleteAllCart, deleteItemCart } = useContext(CartContext);
     const [total, setTotal] = useState(0);
+    const [show, setShow] = useState(false);
+    const handleOpen = () => {
+        setShow(true);
+    }
+    const handleClose = () => {
+        setShow(false);
+    }
     const handleDeleteAll = () => {
         deleteAllCart();
     }
@@ -26,7 +34,7 @@ const Checkout = () => {
                 </div>
                 
                 {cart.map((item) => (
-                <div className={styles.CartItems}>
+                <div key={item.id} className={styles.CartItems}>
                     <div className={styles.imagebox}>
                         <img src={item.imagen} height={"120px"} width={"150px"}></img>
                     </div>
@@ -52,8 +60,9 @@ const Checkout = () => {
                         
                         <div className={styles.totalAmount}>${total}</div>
                     </div>
-                    <Button className={styles.confirmShop} color='warning' variant='contained' >Comprar</Button>
+                    <Button className={styles.confirmShop} onClick={handleOpen} color='warning' variant='contained' >Comprar</Button>
                 </div>
+                <ModalUser show={show} handleClose={handleClose} />
             </div>
         </div>
         ) : (
