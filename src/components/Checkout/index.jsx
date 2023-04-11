@@ -94,7 +94,7 @@ const Checkout = () => {
             </div>
             <div className={styles.about}>
               <h2 className={styles.title}>Cantidad</h2>
-              <div className={styles.subtitle}>{item.cantidad} unidad</div>
+              <div className={styles.subtitle}>{item.cantidad} unidad/es</div>
             </div>
             <div className={styles.prices}>
               <div className={styles.amount}>${item.precio * item.cantidad} </div>
