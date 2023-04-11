@@ -1,0 +1,17 @@
+.notFound {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+.backnotFound {
+  border: solid 2px;
+  border-radius: 5%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.733);
+}

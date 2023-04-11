@@ -7,6 +7,7 @@ import db from "../../../db/firebase-config.js";
 import { addDoc, collection } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import ModalOrder from "../ModalOrder";
+import NotFound from "../NotFound";
 
 const Checkout = () => {
   const { cart, deleteAllCart, deleteItemCart } = useContext(CartContext);
@@ -117,9 +118,7 @@ const Checkout = () => {
       </div>
     </div>
   ) : (
-    <div className={styles.notFound}>
-      <h1>El carrito esta vacio</h1>
-    </div>
+    <NotFound view="El carrito esta vacio" />
   );
 };
 
