@@ -2,12 +2,13 @@
 
 ## Descripción
 
-TecnoMart es un e-commerce orientado a la venta de insumos informáticos.
+TecnoMart es un prototipo e-commerce desarrollado con React orientado a la venta de insumos informáticos donde los usuarios pueden encontrar productos relacionados con la tecnología, como perífericos, notebooks y monitores.
 
 ## Lenguajes y frameworks utilizados
 
-- Para el desarrollo del FrontEnd y BackEnd se utilizaron React.js, JavaScript, CSS, HTML, Node.js y Firebase.
+- Para el desarrollo del FrontEnd y BackEnd se utilizaron React.js, JavaScript, CSS, HTML, Node.js, Firebase y Material UI.
 - El IDE utilizado fue VSCode.
+
 
 ## Instalación y ejecución
 
