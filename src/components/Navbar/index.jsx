@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import styles from './navbar.module.css';
-import logo from '../../assets/logopag.png';
-import CartWidget from '../CartWidget';
-import { Button, Menu, MenuItem } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import styles from "./navbar.module.css";
+import logo from "../../assets/logopag.png";
+import CartWidget from "../CartWidget";
+import { Button, Menu, MenuItem } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [category, setCategory] = useState(null);
@@ -16,34 +16,52 @@ const Navbar = () => {
   };
   return (
     <nav className={styles.container}>
-    <div className={styles.menu}>
-        <Link to="/"> <Button>Home</Button></Link>
-        <Button onClick={showCategory} 
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}> Categorías</Button>
-        <Link to="/contact"><Button>Contacto</Button></Link>
-        <Link to="/about"><Button>Acerca</Button></Link>
-        <Link to="/cart"><CartWidget /></Link>
+      <div className={styles.menu}>
+        <Link to="/">
+          {" "}
+          <Button>Home</Button>
+        </Link>
+        <Button onClick={showCategory} aria-controls={open ? "basic-menu" : undefined} aria-haspopup="true" aria-expanded={open ? "true" : undefined}>
+          {" "}
+          Categorías
+        </Button>
+        <Link to="/contact">
+          <Button>Contacto</Button>
+        </Link>
+        <Link to="/about">
+          <Button>Acerca</Button>
+        </Link>
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
         <Menu
-        id="basic-menu"
-        anchorEl={category}
-        open={open}
-        onClose={closeCategory}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <Link to="/category/Notebooks"><MenuItem onClick={closeCategory}>Notebooks</MenuItem></Link>
-        <Link to="/category/Monitores"><MenuItem onClick={closeCategory}>Monitores</MenuItem></Link>
-        <Link to="/category/Perifericos"><MenuItem onClick={closeCategory}>Perifericos</MenuItem></Link>
-      </Menu>
-    </div>
-        <div className={styles.logo}>
-        <Link to="/"><img src={logo} /></Link>
-        </div>
+          id="basic-menu"
+          disableScrollLock={true}
+          anchorEl={category}
+          open={open}
+          onClose={closeCategory}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+          }}
+        >
+          <Link to="/category/Notebooks">
+            <MenuItem onClick={closeCategory}>Notebooks</MenuItem>
+          </Link>
+          <Link to="/category/Monitores">
+            <MenuItem onClick={closeCategory}>Monitores</MenuItem>
+          </Link>
+          <Link to="/category/Perifericos">
+            <MenuItem onClick={closeCategory}>Perifericos</MenuItem>
+          </Link>
+        </Menu>
+      </div>
+      <div className={styles.logo}>
+        <Link to="/">
+          <img src={logo} />
+        </Link>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

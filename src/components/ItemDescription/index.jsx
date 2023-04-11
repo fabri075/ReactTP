@@ -1,9 +1,9 @@
-import { AddShoppingCart } from '@mui/icons-material';
-import styles from './ItemDescription.module.css';
-import { Alert, Button, Snackbar } from '@mui/material';
+import { AddShoppingCart } from "@mui/icons-material";
+import styles from "./itemDescription.module.css";
+import { Alert, Button, Snackbar } from "@mui/material";
 import { useContext, useState } from "react";
-import QuantitySelector from '../QuantitySelector';
-import { CartContext } from '../../contexts/CartContext';
+import QuantitySelector from "../QuantitySelector";
+import { CartContext } from "../../contexts/CartContext";
 
 const ItemDescription = ({ item }) => {
   const [quantity, setQuantity] = useState(1);
@@ -14,12 +14,12 @@ const ItemDescription = ({ item }) => {
   const handleAddCart = () => {
     addCart(item, quantity);
     setAlert(true);
-  }
+  };
   const handleQuantityChange = (total) => {
     setQuantity(total);
-  }
+  };
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -36,7 +36,9 @@ const ItemDescription = ({ item }) => {
           <p>{item.descripcion}</p>
           <h4>${item.precio}</h4>
           <QuantitySelector count={quantity} changeQuantity={handleQuantityChange} />
-          <Button color='warning' onClick={handleAddCart} variant='contained' startIcon={<AddShoppingCart />}>Añadir al carrito</Button>
+          <Button color="warning" onClick={handleAddCart} variant="contained" startIcon={<AddShoppingCart />}>
+            Añadir al carrito
+          </Button>
           <Snackbar open={alert} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical, horizontal }}>
             <Alert onClose={handleClose} severity="success">
               Producto añadido al carrito
@@ -45,7 +47,7 @@ const ItemDescription = ({ item }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ItemDescription
+export default ItemDescription;
