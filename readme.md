@@ -2,7 +2,12 @@
 
 ## Descripción
 
-TecnoMart es un e-commerce orientado a la venta de insumos informáticos. Para su desarrollo se utilizó React, JS, CSS, HTML y Firebase.
+TecnoMart es un e-commerce orientado a la venta de insumos informáticos.
+
+## Lenguajes y frameworks utilizados
+
+- Para el desarrollo del FrontEnd y BackEnd se utilizaron React.js, JavaScript, CSS, HTML, Node.js y Firebase.
+- El IDE utilizado fue VSCode.
 
 ## Instalación y ejecución
 
@@ -10,9 +15,9 @@ TecnoMart es un e-commerce orientado a la venta de insumos informáticos. Para s
 
 2. Abrir la carpeta principal del proyecto.
 
-3. Escribir por terminal el comando npm i para instalar las dependencias necesarias del proyecto.
+3. Escribir por terminal el comando 'npm i' para instalar las dependencias necesarias del proyecto.
 
-4. Ejecutar npm run dev para abrir el proyecto.
+4. Ejecutar 'npm run dev' para abrir el proyecto.
 
 ## Aclaración
 
