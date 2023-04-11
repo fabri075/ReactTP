@@ -1,15 +1,16 @@
 .container {
-    margin-top: 6rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    text-align: center;
+  margin-top: 6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  text-align: center;
 }
 
-.centercard{
-    display: flex;
-    justify-content: center;
-} 
+.centercard {
+  display: flex;
+  justify-content: center;
+}
 
-h1{
-    margin-bottom: 4rem;
+h1 {
+  margin-bottom: 4rem;
+  font-size: 50px;
 }

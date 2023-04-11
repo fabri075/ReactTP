@@ -1,4 +1,5 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
+import styles from "./modalorder.module.css";
 import React from "react";
 
 const ModalOrder = ({ num, showOrder, handleCloseOrder, finishBought }) => {
@@ -22,9 +23,11 @@ const ModalOrder = ({ num, showOrder, handleCloseOrder, finishBought }) => {
         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
           <b>Numero de compra:</b> {num}
         </Typography>
-        <Button color="warning" variant="contained" onClick={finishBought}>
-          Finalizar
-        </Button>
+        <div className={styles.btnFinish}>
+          <Button color="warning" variant="contained" onClick={finishBought}>
+            Finalizar
+          </Button>
+        </div>
       </Box>
     </Modal>
   );

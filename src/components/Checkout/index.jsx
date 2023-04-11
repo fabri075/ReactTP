@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import styles from "./checkout.module.css";
-import { Button } from "@mui/material";
+import { Backdrop, Button, CircularProgress } from "@mui/material";
 import ModalUser from "../ModalUser";
 import db from "../../../db/firebase-config.js";
 import { addDoc, collection } from "firebase/firestore";
@@ -15,6 +15,7 @@ const Checkout = () => {
   const [show, setShow] = useState(false);
   const [showorder, setShoworder] = useState(false);
   const [data, setData] = useState({});
+  const [load, setLoad] = useState(false);
   const dataCollection = collection(db, "order");
   const returnHome = useNavigate();
 
@@ -29,6 +30,7 @@ const Checkout = () => {
     setShoworder(false);
   };
   const handleSave = (user) => {
+    setLoad(true);
     setData({
       id: Math.floor(Math.random() * 90000) + 10000,
       total: total,
@@ -62,7 +64,7 @@ const Checkout = () => {
     if (Object.keys(data).length >= 1) {
       addDoc(dataCollection, data)
         .then(() => {
-          console.log("Entro");
+          setLoad(false);
           setShoworder(true);
         })
         .catch((error) => {
@@ -115,6 +117,9 @@ const Checkout = () => {
         </div>
         <ModalUser show={show} handleClose={handleClose} handleSave={handleSave} />
         <ModalOrder num={data.id} showOrder={showorder} handleCloseOrder={handleCloseOrder} finishBought={finishBought} />
+        <Backdrop sx={{ color: "warning", zIndex: (theme) => theme.zIndex.drawer + 1 }} open={load} onClick={handleClose}>
+          <CircularProgress color="inherit" />
+        </Backdrop>
       </div>
     </div>
   ) : (
